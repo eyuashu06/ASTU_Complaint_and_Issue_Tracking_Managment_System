@@ -31,6 +31,13 @@ exports.register = async (req, res) => {
     console.error(err.message);
     res.status(500).send("Server Error");
   }
+  if (!email || !password || !name) {
+    return res.status(400).json({ message: "Please fill all fields" });
+  }
+
+  if (password.length < 6) {
+    return res.status(400).json({ message: "Password must be at least 6 characters" });
+  }
 };
 
 // Login user

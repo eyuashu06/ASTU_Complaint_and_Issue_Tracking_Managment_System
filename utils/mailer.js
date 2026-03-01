@@ -2,8 +2,8 @@
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  host: "sandbox.smtp.mailtrap.io",
-  port: 2525,
+  host: process.env.MAILTRAP_HOST,
+  port: process.env.MAILTRAP_PORT,
   secure: false,
   auth: {
     user: process.env.MAILTRAP_USER,
@@ -15,11 +15,12 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async ({ to, subject, text, html }) => {
   try {
     const info = await transporter.sendMail({
-      from: '"ASTU Complaint System" <noreply@astu.test>',
+      from: '"ASTU Complaint System" <reply@astu.com>',
       to,
       subject,
       text,
-      html
+      html,
+      attachments
     });
 
     console.log("Email sent:", info.messageId);
