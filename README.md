@@ -30,25 +30,25 @@ Students and admins must register and log in to access the system. Authenticatio
 
 ### Fields:
 
- Field                Type          Required                   Notes 
+ Field       |||         Type     |||     Required     |||              Notes 
 
- title                String          Yes                  Title of the complaint            
- description          String          Yes                  Detailed description              
- category             String          Yes                  Complaint category                
- priority             String          Yes                  e.g., Low, Medium, High          
- location             String          Yes                  Location related to complaint     
- contactPreference    String          Yes                  Email, phone, etc.                
- attachments     File[.png, pdf ,...]    No(Optional)     Optional email attachments        
+ title       ||         String    ||      Yes         ||         Title of the complaint            
+ description   ||       String     ||     Yes         ||         Detailed description              
+ category      ||       String    ||      Yes         ||         Complaint category                
+ priority     ||        String    ||      Yes         ||         e.g., Low, Medium, High          
+ location    ||         String    ||      Yes         ||         Location related to complaint     
+ contactPreference  ||  String     ||     Yes         ||         Email, phone, etc.                
+ attachments   ||    File[.png, pdf ,...]    ||    No(Optional)   ||    Optional email attachments        
 
 => Upon submission, an email notification is sent to the student and the admin via Mailtrap.
 
 ## Complaint Statuses
 
- Status           Description                                         
+ Status    |||       Description                                         
 
- Open             Complaint submitted, not yet addressed             
- In Progress      Complaint is being handled by a department         
- Resolved         Complaint has been completed and resolved          
+ Open        ||     Complaint submitted, not yet addressed             
+ In Progress    ||    Complaint is being handled by a department         
+ Resolved     ||      Complaint has been completed and resolved          
 
 ## Update & Reply
 
@@ -97,11 +97,11 @@ The system includes a **rule-based / AI-assisted chatbot** to guide users:
 
 ## Rules & Permissions
 
- Role         Permissions                                                
+ Role    |||      Permissions                                                
  
- Student      Submit complaints, view own complaints, receive notifications 
- Department   View all complaints, update status, add remarks, reply     
- Admin        View all complaints, update status, add remarks, delete complaints 
+ Student   ||   Submit complaints, view own complaints, receive notifications 
+ Department   ||   View all complaints, update status, add remarks, reply     
+ Admin    ||    View all complaints, update status, add remarks, delete complaints 
 
 ## System Behavior & Usage
 
